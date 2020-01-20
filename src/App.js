@@ -16,10 +16,11 @@ export class App extends React.Component {
     const { label } = this.state;
 
     return (
-      <div>
-        <input type="text" value={label} onChange={this.handleChangeLabel} />
-        <span>{label}</span>
-      </div>
+      <Wrapper>
+        <Container>
+          <Header>BASS WAVE</Header>
+        </Container>
+      </Wrapper>
     );
   }
 }
