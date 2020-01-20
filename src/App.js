@@ -2,7 +2,24 @@ import React from "react";
 import styled from "styled-components";
 
 export class App extends React.Component {
+  state = {
+    label: "experimental",
+    searchValue: ""
+  };
+
+  handleChangeLabel = e => {
+    e.preventDefault();
+    this.setState({ label: e.target.value });
+  };
+
   render() {
-    return <div>Hello there</div>;
+    const { label } = this.state;
+
+    return (
+      <div>
+        <input type="text" value={label} onChange={this.handleChangeLabel} />
+        <span>{label}</span>
+      </div>
+    );
   }
 }
