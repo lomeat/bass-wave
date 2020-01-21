@@ -78,11 +78,11 @@ export class App extends React.Component {
                 placeholder="Label name..."
                 onChange={this.changeLabel}
               />
-              <Input
+              {/* <Input
                 value={searchValue}
                 placeholder="Search on Unsplash..."
                 onChange={this.changeSearchValue}
-              />
+              /> */}
             </InputWrapper>
             <ImageWrapper>
               {this.state.fileUrl ? (
