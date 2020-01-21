@@ -1,5 +1,5 @@
 # Bass Wave Constructor
 
-(link)[google.com]
+[Constructor](https://lomeat.github.io/bass-wave/)
 
 Create images for posts of Bass Wave with simple constructor
