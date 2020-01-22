@@ -4,6 +4,8 @@ import styled from "styled-components";
 import logo from "./img/logo.png";
 import example from "./img/example.jpg";
 
+import { Search } from "./search";
+
 export class App extends React.Component {
   state = {
     label: "EXPERIMENTAL",
@@ -78,11 +80,10 @@ export class App extends React.Component {
                 placeholder="Label name..."
                 onChange={this.changeLabel}
               />
-              <Input
-                value={searchValue}
-                placeholder="Search on Unsplash..."
+              <Search
                 onChange={this.changeSearchValue}
-              />
+                value={searchValue}
+              ></Search>
             </InputWrapper>
             <ImageWrapper>
               {this.state.fileUrl ? (
