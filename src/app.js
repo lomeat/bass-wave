@@ -54,7 +54,7 @@ export class App extends React.Component {
       ctx.fillRect(0, 335, 720, 71);
 
       ctx.fillStyle = "white";
-      ctx.font = "bold 26px Helvetica";
+      ctx.font = "bold 26px Helvetica Neue";
       ctx.fillText(label, 16, 380);
 
       const link = document.createElement("a");
@@ -78,11 +78,11 @@ export class App extends React.Component {
                 placeholder="Label name..."
                 onChange={this.changeLabel}
               />
-              {/* <Input
+              <Input
                 value={searchValue}
                 placeholder="Search on Unsplash..."
                 onChange={this.changeSearchValue}
-              /> */}
+              />
             </InputWrapper>
             <ImageWrapper>
               {this.state.fileUrl ? (
@@ -184,7 +184,7 @@ const Label = styled.div`
   font-size: 26px;
   width: 720px;
   box-sizing: border-box;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Helvetica Neue";
   font-weight: 600;
   text-transform: uppercase;
   padding: 18px 16px;
