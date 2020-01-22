@@ -118,8 +118,7 @@ const UploadInput = styled.label`
   border-radius: 10px;
   border: 0;
   color: white;
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
+  font-family: "Roboto Regular", sans-serif;
   font-size: 20px;
   outline: none;
   transition: 0.1s ease;
@@ -206,8 +205,7 @@ const Button = styled.button`
   border-radius: 10px;
   border: 0;
   color: white;
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
+  font-family: "Roboto Medium", sans-serif;
   font-size: 20px;
   outline: none;
   transition: 0.1s ease;
