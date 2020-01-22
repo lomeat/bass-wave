@@ -15,6 +15,10 @@ export const Input = styled.input`
     border: 1px solid #58a7dc;
   }
 
+  &:focus + #modal {
+    display: block;
+  }
+
   @media (max-width: 760px) {
     width: 95vw;
     margin-top: 20px;

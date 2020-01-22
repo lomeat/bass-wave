@@ -100,8 +100,10 @@ export class App extends React.Component {
               ) : (
                 <ImageBackground src={file} />
               )}
-              <Label>{label}</Label>
-              <Icon src={icon}></Icon>
+              <Label>
+                {label}
+                <Icon src={icon}></Icon>
+              </Label>
             </ImageWrapper>
             <ButtonWrapper>
               <UploadInput>
@@ -204,11 +206,11 @@ const Label = styled.div`
 
 const Icon = styled.img`
   position: absolute;
-  top: 328px;
+  top: -16px;
   left: 582px;
 
   @media (max-width: 760px) {
-    top: 78%;
+    top: -25%;
     left: 78%;
     width: 20vw;
   }
