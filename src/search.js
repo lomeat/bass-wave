@@ -6,7 +6,7 @@ export const Search = ({ value, onChange }) => {
     <SearchWrapper>
       <Input
         value={value}
-        placeholder="Search on Unsplash..."
+        placeholder="not work yet"
         onChange={e => onChange(e)}
       />
       <Modal id="modal">

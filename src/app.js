@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 import logo from "./img/logo.png";
 import example from "./img/example.jpg";
+import icon from "./img/icon.png";
+import icon2x from "./img/icon2x.png";
 
 import { Search } from "./search";
 
@@ -47,17 +49,23 @@ export class App extends React.Component {
     canvas.width = 720;
     canvas.height = 405;
 
-    const img = new Image();
-    img.src = fileUrl ? fileUrl : file;
-    img.onload = () => {
-      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    const backImg = new Image();
+    backImg.src = fileUrl ? fileUrl : file;
+    backImg.onload = () => {
+      ctx.drawImage(backImg, 0, 0, canvas.width, canvas.height);
 
       ctx.fillStyle = "rgba(0, 0, 0, 0.5)";
       ctx.fillRect(0, 335, 720, 71);
 
       ctx.fillStyle = "white";
-      ctx.font = "bold 26px Helvetica Neue";
+      ctx.font = "bold 32px Helvetica Neue";
       ctx.fillText(label, 16, 380);
+    };
+
+    const iconImg = new Image();
+    iconImg.src = icon2x;
+    iconImg.onload = () => {
+      ctx.drawImage(iconImg, 582, 325, 135, 91);
 
       const link = document.createElement("a");
       link.download = "bass-wave.jpg";
@@ -92,6 +100,7 @@ export class App extends React.Component {
                 <ImageBackground src={file} />
               )}
               <Label>{label}</Label>
+              <Icon src={icon}></Icon>
             </ImageWrapper>
             <ButtonWrapper>
               <UploadInput>
@@ -118,7 +127,7 @@ const UploadInput = styled.label`
   border-radius: 10px;
   border: 0;
   color: white;
-  font-family: "Roboto Regular", sans-serif;
+  font-family: "Roboto Medium", sans-serif;
   font-size: 20px;
   outline: none;
   transition: 0.1s ease;
@@ -157,7 +166,7 @@ const Input = styled.input`
   outline: none;
   border-radius: 10px;
   font-size: 18px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Regular", sans-serif;
   transition: 0.2s ease;
 
   &:focus {
@@ -181,17 +190,23 @@ const ImageBackground = styled.img`
 
 const Label = styled.div`
   color: white;
-  font-size: 26px;
+  font-size: 30px;
   width: 720px;
   box-sizing: border-box;
   font-family: "Helvetica Neue";
   font-weight: 600;
   text-transform: uppercase;
-  padding: 18px 16px;
+  padding: 12px 18px;
   position: absolute;
   bottom: 4px;
   left: 0;
   background: rgba(0, 0, 0, 0.5);
+`;
+
+const Icon = styled.img`
+  position: absolute;
+  top: 328px;
+  left: 582px;
 `;
 
 const ButtonWrapper = styled.div`
