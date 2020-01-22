@@ -7,6 +7,7 @@ import icon from "./img/icon.png";
 import icon2x from "./img/icon2x.png";
 
 import { Search } from "./search";
+import { Input } from "./ui";
 
 export class App extends React.Component {
   state = {
@@ -144,33 +145,27 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 70px auto;
+
+  @media (max-width: 760px) {
+    width: 300px;
+  }
 `;
 
 const Wrapper = styled.div``;
 
 const Logo = styled.img`
-  background: gray;
+  @media (max-width: 760px) {
+    width: 50vw;
+  }
 `;
 
 const InputWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   padding-top: 60px;
-`;
 
-const Input = styled.input`
-  width: 320px;
-  box-sizing: border-box;
-  padding: 10px 16px;
-  border: 1px solid #c0e1f6;
-  outline: none;
-  border-radius: 10px;
-  font-size: 18px;
-  font-family: "Roboto Regular", sans-serif;
-  transition: 0.2s ease;
-
-  &:focus {
-    border: 1px solid #58a7dc;
+  @media (max-width: 760px) {
+    flex-direction: column;
   }
 `;
 
@@ -180,8 +175,7 @@ const ImageWrapper = styled.div`
 `;
 
 const ImageBackground = styled.img`
-  width: 720px;
-  height: 405px;
+  width: 100%;
   border: 0;
   background-color: #69b4e6;
   margin: 0;
@@ -191,9 +185,9 @@ const ImageBackground = styled.img`
 const Label = styled.div`
   color: white;
   font-size: 30px;
-  width: 720px;
+  width: 100%;
   box-sizing: border-box;
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   padding: 12px 18px;
@@ -201,12 +195,23 @@ const Label = styled.div`
   bottom: 4px;
   left: 0;
   background: rgba(0, 0, 0, 0.5);
+
+  @media (max-width: 760px) {
+    font-size: 4vw;
+    padding: 2vw 2.3vw;
+  }
 `;
 
 const Icon = styled.img`
   position: absolute;
   top: 328px;
   left: 582px;
+
+  @media (max-width: 760px) {
+    top: 78%;
+    left: 78%;
+    width: 20vw;
+  }
 `;
 
 const ButtonWrapper = styled.div`

@@ -10,18 +10,18 @@ import * as serviceWorker from "./serviceWorker";
 import { App } from "./app";
 
 const GlobalStyle = createGlobalStyle`
- @font-face {
-      font-family: "Roboto Regular";
-      src: url("./fonts/Roboto-Regular.ttf");
-    }
- @font-face {
-      font-family: "Roboto Medium";
-      src: url("./fonts/Roboto-Medium.ttf");
-    }
- @font-face {
-      font-family: "Helvetica Neue";
-      src: url("./fonts/Helvetica-Neue.ttf");
-    }
+  @font-face {
+    font-family: "Roboto Regular";
+    src: url("./fonts/Roboto-Regular.ttf");
+  }
+  @font-face {
+    font-family: "Roboto Medium";
+    src: url("./fonts/Roboto-Medium.ttf");
+  }
+  @font-face {
+    font-family: "Helvetica Neue";
+    src: url("./fonts/Helvetica-Neue.ttf");
+  }
 `;
 
 ReactDOM.render(
